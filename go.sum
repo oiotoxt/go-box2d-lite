@@ -1,0 +1,4 @@
+github.com/neguse/go-box2d-lite v0.0.0-20170921151050-5d8ed9b7272b h1:+67TGbwfgeB5o03Rx+ZBW44zAQ+wUujcwdRA0p9CbJI=
+github.com/neguse/go-box2d-lite v0.0.0-20170921151050-5d8ed9b7272b/go.mod h1:kvKwD9codtns5mvpA53V3vLnqFb/Ahcu8zgkGM0SIbI=
+github.com/veandco/go-sdl2 v0.3.3 h1:4/TirgB2MQ7oww3pM3Yfgf1YbChMlAQAmiCPe5koK0I=
+github.com/veandco/go-sdl2 v0.3.3/go.mod h1:FB+kTpX9YTE+urhYiClnRzpOXbiWgaU3+5F2AB78DPg=
