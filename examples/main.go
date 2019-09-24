@@ -461,7 +461,7 @@ func (app *App) ProcessEvent(e interface{}) {
 	switch t := e.(type) {
 	case *sdl.QuitEvent:
 		app.quit = true
-	case *sdl.KeyDownEvent:
+	case *sdl.KeyboardEvent:
 		switch t.Keysym.Sym {
 		case sdl.K_1:
 			app.Demo1()
@@ -504,10 +504,10 @@ func (app *App) RenderBody(b *b2d.Body) {
 	v3 := o.Add(S.MulV(x.Add(R.MulV(b2d.Vec2{h.X, h.Y}))))
 	v4 := o.Add(S.MulV(x.Add(R.MulV(b2d.Vec2{-h.X, h.Y}))))
 
-	app.Renderer.DrawLine(int(v1.X), int(v1.Y), int(v2.X), int(v2.Y))
-	app.Renderer.DrawLine(int(v2.X), int(v2.Y), int(v3.X), int(v3.Y))
-	app.Renderer.DrawLine(int(v3.X), int(v3.Y), int(v4.X), int(v4.Y))
-	app.Renderer.DrawLine(int(v4.X), int(v4.Y), int(v1.X), int(v1.Y))
+	app.Renderer.DrawLine(int32(v1.X), int32(v1.Y), int32(v2.X), int32(v2.Y))
+	app.Renderer.DrawLine(int32(v2.X), int32(v2.Y), int32(v3.X), int32(v3.Y))
+	app.Renderer.DrawLine(int32(v3.X), int32(v3.Y), int32(v4.X), int32(v4.Y))
+	app.Renderer.DrawLine(int32(v4.X), int32(v4.Y), int32(v1.X), int32(v1.Y))
 }
 
 func (app *App) RenderJoint(j *b2d.Joint) {
@@ -533,8 +533,8 @@ func (app *App) RenderJoint(j *b2d.Joint) {
 	x2 = o.Add(S.MulV(x2))
 	p2 = o.Add(S.MulV(p2))
 
-	app.Renderer.DrawLine(int(x1.X), int(x1.Y), int(p1.X), int(p1.Y))
-	app.Renderer.DrawLine(int(x2.X), int(x2.Y), int(p2.X), int(p2.Y))
+	app.Renderer.DrawLine(int32(x1.X), int32(x1.Y), int32(p1.X), int32(p1.Y))
+	app.Renderer.DrawLine(int32(x2.X), int32(x2.Y), int32(p2.X), int32(p2.Y))
 }
 
 func (app *App) OnRender() {
